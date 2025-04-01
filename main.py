@@ -6,20 +6,24 @@ def add(x, y):
 def subtract(x, y):
     return x - y
 
+# This function multiplies two numbers
+def multiply(x, y):
+    return x * y
 
 
 
 print("Select operation.")
 print("1.Add")
 print("2.Subtract")
+print("3.Multiply")
 
 
 while True:
     # take input from the user
-    choice = input("Enter choice(1/2): ")
+    choice = input("Enter choice(1/2/3): ")
 
     # check if choice is one of the four options
-    if choice in ('1', '2'):
+    if choice in ('1', '2','3'):
         try:
             num1 = float(input("Enter first number: "))
             num2 = float(input("Enter second number: "))
@@ -32,6 +36,9 @@ while True:
 
         elif choice == '2':
             print(num1, "-", num2, "=", subtract(num1, num2))
+            
+        elif choice == '3':
+            print(num1, "*", num2, "=", multiply(num1, num2))
 
 
         
